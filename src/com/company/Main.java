@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         GUI GuiFrame= new GUI(500,500);
         GuiFrame.setGUI();
+        GuiFrame.setUpButtonListeners();
 
 
     }

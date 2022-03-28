@@ -1,8 +1,8 @@
 package com.company;
 import  javax.swing.JFrame;
 import  javax.swing.JButton;
-
-import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GUI {
     private JFrame frame;
@@ -25,6 +25,15 @@ public class GUI {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);//sempre no final
+    }
+    public void setUpButtonListeners(){
+        ActionListener buttonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            System.out.println("I Was Clicked!");
+            }
+        };
+        botao.addActionListener(buttonListener);// adicionar o evento ao botao expecifico
     }
 
 }
